@@ -1,0 +1,22 @@
+name: Publish Docker Repository
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    name: Deploy to staging
+    runs-on: ubuntu-latest
+
+    # [steps] A sequence of tasks
+    steps:
+    - name: Checkout
+    - uses: actions/checkout@master
+
+    - name: Publish to Registry
+      uses: elgohr/Publish-Docker-Github-Action@master
+      with:
+        name: tuckn/aws-cli-tokyo
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
