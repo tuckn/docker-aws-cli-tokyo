@@ -1,4 +1,4 @@
-# docker-aws-cli-tokyo
+# Dockerfile: aws-cli-tokyo
 
 Docker image of [amazon/aws-cli](https://hub.docker.com/r/amazon/aws-cli) set in Asia/Tokyo time.
 Works portable.
@@ -16,7 +16,7 @@ Install Docker on your PC.
 
 [Get Docker | Docker Documentation](https://docs.docker.com/get-docker/)
 
-Pull the Docker image.
+Pull this Docker image.
 
 ```console
 $ docker pull tuckn/aws-cli-tokyo
